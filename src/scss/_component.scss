@@ -1,0 +1,532 @@
+// title
+%title{
+  color: $titleColor;
+  font-size: $titleFontSize;
+  font-weight:$titleFont;
+}
+.page-title{
+  @extend  %title;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.section-title{
+  @extend %title;
+  margin-bottom: 15px;
+}
+
+//header
+#header{
+  width: 100%;
+  margin-bottom: 60px;
+    nav{
+      background-color: $headerBg;
+      box-shadow: none;
+
+      ul.user-control{
+        font-weight:$fontRegular;
+        font-size: 20px;
+        color: $darkGrey;
+        margin-right: auto;
+
+        &#nav-mobile{
+          li.active, li:hover{
+            a{
+
+              color: $purple;
+            }
+            background-color: $white;
+          }
+        }
+
+
+        span{
+          margin: 0 20px 0 15px;
+        }
+
+        .icon-arrow-down{
+          font-size: 12px;
+        }
+      }
+
+      .logo{
+
+      }
+      ul.cart-n-lock{
+        margin-left: auto;
+        .badge{
+          min-width: inherit;
+          padding: 4px 0;
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+        li:hover{
+          background-color: #fff;
+          a{
+            color: $purple;
+          }
+        }
+        i + span{
+          display: inline-block;
+          margin-left: 6px;
+        }
+      }
+  }
+}
+
+
+
+
+//aside
+%activeLink{
+  border-left-color: $orange;
+  background-color: $activeLinkBg;
+  color: $activeLinkColor;
+}
+
+#aside{
+  background-color: $asideBg;
+  width:$asideWidth;
+  height:100vh;
+  left: 0;
+  z-index: 100;
+
+  .menu-control{
+    padding: 18px;
+
+    .menu-btn{
+      cursor: pointer;
+
+      span{
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: $darkGrey;
+
+        & + span{
+          margin-top: 5px;
+        }
+      }
+    }
+
+  }
+
+  .aside-menu{
+    ul{
+      li{
+        color: $darkGrey ;
+
+        &.active{
+          a{
+            @extend %activeLink;
+          }
+        }
+
+        a{
+          display: block;
+          padding: 14px;
+          border-left:4px solid transparent;
+
+          [class*='icon-']{
+            font-size: 17px;
+            margin-right: 15px;
+          }
+
+          &:hover{
+            @extend  %activeLink;
+          }
+        }
+      }
+    }
+  }
+}
+
+//default-section
+.default-section{
+  padding: 120px 0;
+  background-color: $white;
+}
+
+//btn
+.btn-small{
+  font-size: $btnSmallFontSize;
+  padding: 10px 15px;
+  line-height: $lineHeight;
+}
+.btn-action{
+  background-color: $btnActionBg;
+  &:hover{
+    background-color: $btnActionBgHover;
+  }
+}
+.btn-add-to-cart{
+  padding: 7px 15px;
+  background-color: $btnAddBg;
+  i{
+    margin-right:0;
+  }
+  &:hover{
+    background-color: $btnAddBgHover;
+  }
+}
+
+//item
+.item-title{
+  font-size: $itemTitleFontSize;
+  color: $lightPurple;
+  font-weight:$fontBold;
+  text-transform: uppercase;
+  &:hover{
+    color: $pink;
+  }
+}
+.item-description{
+  color: $itemDescriptionColor;
+  font-weight:$fontRegular;
+  font-size: $itemDescriptionFontSize;
+}
+.item-price{
+  font-size: $itemPriceFontSize;
+  font-weight:$fontMedium;
+  color: $black;
+}
+
+//flexslider
+.best-items{
+  .container{
+    .best-items-carousel{
+      .slick-slide:focus{
+        outline:none;
+      }
+      .card{
+        border-radius: 20px;
+        padding: 10px;
+        background: rgba(255, 255, 255, .7) linear-gradient(to right,  $greenblueGrad, $purpleGrad);
+        .card-image{
+          background-color: rgba(255, 255, 255, .9);
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          padding: 10px;
+        }
+        .card-content{
+          font-size: 14px;
+          padding: 15px;
+          color: $white;
+          .item-price{
+            font-size: 12px;
+            color: $white;
+          }
+        }
+        .card-action{
+          padding: 15px;
+          .btn{
+            background-color: #fff;
+            color: $btnActionBg;
+            width: 120px;
+            &:hover{
+              font-weight: $fontMedium;
+            }
+          }
+        }
+      }
+      .slick-next:before{
+        content: '\f138';
+        font-family: FontAwesome;
+      }
+    }
+  }
+}
+.carousel-of-propose-items{
+  background: url('../img/bg1.png') no-repeat center / cover;
+  .flexslider{
+    background-color: $white;
+    .page-title{
+      padding-top: 18px;
+    }
+    .slides{
+      width: 100%;
+      li{
+        display: inline-block;
+        width:100%;
+        height:100%;
+        .propose-item{
+          height: 100%;
+          padding: 30px 30px 80px 30px;
+          .propose-item-img{
+            width: 45%;
+            img{
+              width:100%;
+            }
+          }
+          .propose-item-info-wrap{
+
+            width: 45%;
+            .propose-item-info{
+              flex-direction: column;
+              height: 100%;
+              .item-title{
+                margin-bottom: 15px;
+              }
+              .item-description{
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+//new arrivals
+.new-arrival{
+  background-color: $xsLightGrey;
+  .container{
+    .row{
+      .item{
+        .card-image{
+          padding: 10px;
+          img{
+            width: 100%;
+          }
+        }
+        .card-content .item-title,
+        .card-reveal .item-title{
+          i{
+            color: $black;
+          }
+          &:hover{
+            cursor: pointer;
+            i{
+              color: $black;
+              &:hover{
+                color: $pink;
+              }
+            }
+          }
+
+        }
+        .btn{
+          height: auto;
+        }
+      }
+    }
+    .show-more-items{
+      background-color: $white;
+      padding: 15px 0;
+      text-align: center;
+      &:hover{
+        cursor: pointer;
+        i{
+          color: $lightPurple;
+        }
+      }
+      i+i{
+        margin-left: 5px;
+      }
+      i{
+        display: inline-block;
+        color: $purple;
+
+      }
+    }
+  }
+}
+//content
+.content-wrapper{
+  padding: 18px;
+  height: calc(100vh - 62px);
+  overflow-y: auto;
+}
+
+.card{
+  background-color: $cardBg;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  .card-header{
+    border-bottom: 1px solid $lightGrey;
+    padding: 18px;
+  }
+}
+
+//aside
+.aside-menu{
+  width: 25%;
+  min-width: 300px;
+  .aside-element{
+    background-color: $white;
+    padding: 25px;
+
+    & + .aside-element{
+      margin-top: 20px;
+    }
+    .aside-title{
+      padding:0 0 15px 0;
+      font-size: 25px;
+      margin-bottom: 15px;
+      border-bottom: .5px solid $lightGrey;
+    }
+    .form-control-wrap{
+      .input-group{
+        input:checked + label{
+          font-weight: $fontRegular;
+          font-size: 18px;
+        }
+      }
+    }
+
+  }
+}
+//range slider
+.range-slider-wrap{
+  padding: 50px 15px 30px;
+  .noUi-horizontal .noUi-handle:hover,
+  .noUi-horizontal .noUi-handle:active,
+  .noUi-horizontal .noUi-handle:focus{
+    outline:none;
+  }
+}
+
+//catologue
+.catalogue{
+  width: 70%;
+  padding: 0 25px;
+  .item-card{
+    &:hover{
+      box-shadow: 5px 5px 10px $grey;
+    }
+    margin-bottom: 15px;
+    padding: 18px;
+    background-color: $white;
+    & > * + *{
+      margin-top: 15px;
+    }
+    .item-img-wrap{
+      padding-bottom: 10px;
+      border-bottom: .5px solid $lightGrey;
+    }
+  }
+}
+.product-wrap{
+  background-color: $white;
+  padding: 50px 35px;
+  .main-product-body{
+    overflow: hidden;
+    width: 100%;
+    .product-img-wrap{
+      max-width: 400px;
+      padding: 0 18px;
+      width: 100%;
+
+      .lSAction > .lSPrev{
+        left: 0;
+      }
+      .lSAction > .lSNext{
+        right: 0;
+      }
+      .lSSlideWrapper{
+        margin-bottom: 20px;
+      }
+      .lSSlideOuter .lSPager.lSGallery li{
+        background-color: $lightGrey;
+        padding: 10px;
+        transition: all .3s linear;
+        height: 86px;
+        text-align: center;
+        img{
+          display: inline-block;
+          height: 66px;
+        }
+        &:hover{
+          background-color: $xsLightGrey;
+        }
+        &.active, &:focus{
+          outline:none;
+          background-color: transparent;
+          border: 1px solid $lightGrey;
+        }
+      }
+      .lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover{
+        border-radius:0;
+      }
+      #light-slider{
+        & {
+          list-style: none outside none;
+          padding-left: 0;
+          margin-bottom:0;
+        }
+        li {
+          text-align: center;
+          display: inline-block;
+          margin-right: 6px;
+          cursor:pointer;
+        }
+        img {
+          padding: 0 15px;
+          display: inline-block;
+          height: 230px;
+          max-width: 100%;
+        }
+      }
+    }
+    .short-description{
+      width: 100%;
+      .item-title{
+        font-size: 32px;
+        margin-bottom: 18px;
+        padding:0 10px 15px;
+        border-bottom: .5px solid $lightGrey;
+      }
+      .category, .availabiity{
+        padding: 10px;
+        font-weight:$fontRegular;
+        margin-bottom: 18px;
+      }
+      .description{
+        padding: 10px;
+        font-size: 18px;
+        padding-bottom: 18px;
+      }
+      .btn-row{
+        padding: 15px 10px;
+        border-top: .5px solid $lightGrey;
+      }
+    }
+    }
+  .product-characteristics{
+    margin-top: 30px;
+    ul{
+      li, li:last-child{
+        max-width:46%;
+        border-bottom: 1px solid $lightGrey;
+        margin: 15px;
+        font-size: 20px;
+        &.collection-header{
+          max-width: 100%;
+        }
+        .characteristic-name{
+          font-weight: $fontRegular;
+        }
+      }
+    }
+  }
+  }
+
+
+//footer
+.page-footer{
+  margin-top: 60px;
+  background-color: $darkGrey;
+  .footer-copyright{
+    background-color: $black;
+  }
+}
+
+
+
