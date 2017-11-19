@@ -395,7 +395,7 @@
 
 //catologue
 .catalogue{
-  width: 70%;
+  width: 65%;
   padding: 0 25px;
   .item-card{
     &:hover{
@@ -516,9 +516,21 @@
       }
     }
   }
+}
+
+//registration
+.registr{
+  display: flex;
+  justify-content: center;
+  font-weight: $fontMedium;
+  form{
+    display: inline-block;
+    padding: 50px 40px;
+    background-color: $white;
+    width: 100%;
+    font-size: 22px;
   }
-
-
+}
 //footer
 .page-footer{
   margin-top: 60px;

@@ -4894,7 +4894,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .catalogue {
-  width: 70%;
+  width: 65%;
   padding: 0 25px;
 }
 
@@ -5041,6 +5041,26 @@ html[xmlns] .flexslider .slides {
 
 .product-wrap .product-characteristics ul li .characteristic-name, .product-wrap .product-characteristics ul li:last-child .characteristic-name {
   font-weight: 300;
+}
+
+.registr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+}
+
+.registr form {
+  display: inline-block;
+  padding: 50px 40px;
+  background-color: #fff;
+  width: 100%;
+  font-size: 22px;
 }
 
 .page-footer {
