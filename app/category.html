@@ -21,13 +21,14 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="left hide-on-med-and-down user-control">
                         <li><a href="index.html">Главная</a></li>
-                        <li class="active"><a href="category.html">Категории</a></li>
+                        <li class="active"><a class="dropdown-button" href="#!" data-activates="dropdown-cat">Категории<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <!--<li><a href="category.html"></a></li>-->
                         <li><a href="about.html">О магазине</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-                        <li class="active"><a href="index.html">Главная</a></li>
-                        <li><a href="category.html">Категории</a></li>
+                        <li><a href="index.html">Главная</a></li>
+                        <li class="active"><a href="category.html">Категории</a></li>
                         <li><a href="about.html">О магазине</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
@@ -36,8 +37,16 @@
                     </div>
                     <ul class="cart-n-lock">
                         <li><a href=""><i class="fa fa-shopping-cart"></i><span>Корзина<span class="badge">123</span></span></a></li>
-                        <li><a href=""><i class="fa fa-lock "></i><span>Вход</span></a></li>
+                        <li><a class="modal-trigger" href="#modal1"><i class="fa fa-lock "></i><span>Вход</span></a></li>
                     </ul>
+
+                    <form style="width:100%; margin-bottom: 50px">
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
 
                 </div>
             </nav>
@@ -45,208 +54,300 @@
 
     </nav>
 </header>
+<ul id="dropdown-cat" class="dropdown-content z-depth-2">
+    <li><a href="category.html">Phones</a></li>
+    <li class="divider"></li>
+    <li><a href="category.html">Laptops</a></li>
+    <li class="divider"></li>
+    <li><a href="category.html">Desktops</a></li>
+</ul>
+
+<div id="modal1" class="modal">
+    <div class="modal-content registr">
+            <div class="row">
+                <div class="col s12">
+
+                    <form class="z-depth-2">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="login" type="text" class="validate">
+                                <label for="login">Login</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="phone" type="tel" class="validate">
+                                <label for="phone">Phone</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="btn-row">
+                            <button type="submit"  class="btn btn-cart full">Sign up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+    </div>
+</div>
+
 <main id="main">
     <div class="container flex-container">
-        <div class="aside-menu">
-            <div class="aside-element">
-                <div class="aside-title card-title">
-                    <span>Category</span>
+        <div class="row">
+            <div class="col m4 s12">
+
+                <div class="aside-menu">
+                    <div class="aside-element">
+                        <div class="aside-title card-title">
+                            <span>Sort</span>
+                        </div>
+                        <div class="sort">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose sort</option>
+                                    <option value="1">From cheap to expensive</option>
+                                    <option value="2">From expensive to cheap</option>
+                                    <option value="3">New</option>
+                                    <option value="3">Popular</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside-element">
+                        <div class="aside-title card-title">
+                            <span>Category</span>
+                        </div>
+                        <form action="#" class="category radio form-control-wrap">
+                            <p class="radio-group input-group">
+                                <input name="category-group" type="radio" id="laptop" class="with-gap">
+                                <label for="laptop">Ноутбуки</label>
+                            </p>
+                            <p class="radio-group input-group">
+                                <input name="category-group" type="radio" id="phones" class="with-gap">
+                                <label for="phones">Телефоны</label>
+                            </p>
+                            <p class="radio-group input-group">
+                                <input name="category-group" type="radio" id="tablets" class="with-gap">
+                                <label for="tablets">Планшеты</label>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="aside-element">
+                        <div class="aside-title card-title">
+                            <span>Display, ''</span>
+                        </div>
+                        <form action="#" class="display checks form-control-wrap">
+                            <p class="input-group">
+                                <input type="checkbox" id="dis1" />
+                                <label for="dis1">4</label>
+                            </p>
+                            <p class="input-group">
+                                <input type="checkbox" id="dis2" />
+                                <label for="dis2">4.5</label>
+                            </p>
+                            <p class="input-group">
+                                <input type="checkbox" id="dis3" />
+                                <label for="dis3">5</label>
+                            </p>
+                            <p class="input-group">
+                                <input type="checkbox" id="dis4" />
+                                <label for="dis4">7</label>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="aside-element">
+                    <div class="aside-title card-title">
+                        <span>Price</span>
+                    </div>
+                    <div class="range-slider-wrap">
+                        <div id="test-slider"></div>
+                    </div>
                 </div>
-                <form action="#" class="category radio form-control-wrap">
-                    <p class="radio-group input-group">
-                        <input name="category-group" type="radio" id="laptop" class="with-gap">
-                        <label for="laptop">Ноутбуки</label>
-                    </p>
-                    <p class="radio-group input-group">
-                        <input name="category-group" type="radio" id="phones" class="with-gap">
-                        <label for="phones">Телефоны</label>
-                    </p>
-                    <p class="radio-group input-group">
-                        <input name="category-group" type="radio" id="tablets" class="with-gap">
-                        <label for="tablets">Планшеты</label>
-                    </p>
-                </form>
+                </div>
             </div>
-            <div class="aside-element">
-                <div class="aside-title card-title">
-                    <span>Display, ''</span>
+            <div class="col m8 s12">
+
+                <div class="catalogue">
+                    <div class="row">
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m4 s6">
+                            <div class="item-card">
+                                <div class="item-img-wrap">
+                                    <a href="#"><img src="img/item.png" alt=""></a>
+                                </div>
+                                <div class="item-title">
+                                    <a href="">Huinya</a>
+                                </div>
+                                <div class="item-price">
+                                    <span>Price: 2 000 $</span>
+                                </div>
+                                <div class="btn-row">
+                                    <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <form action="#" class="display checks form-control-wrap">
-                    <p class="input-group">
-                        <input type="checkbox" id="dis1" />
-                        <label for="dis1">4</label>
-                    </p>
-                    <p class="input-group">
-                        <input type="checkbox" id="dis2" />
-                        <label for="dis2">4.5</label>
-                    </p>
-                    <p class="input-group">
-                        <input type="checkbox" id="dis3" />
-                        <label for="dis3">5</label>
-                    </p>
-                    <p class="input-group">
-                        <input type="checkbox" id="dis4" />
-                        <label for="dis4">7</label>
-                    </p>
-                </form>
-            </div><div class="aside-element">
-                <div class="aside-title card-title">
-                    <span>Price</span>
-                </div>
-            <div class="range-slider-wrap">
-                <div id="test-slider"></div>
-            </div>
+                <ul class="pagination show-more-items">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
             </div>
         </div>
 
-        <div class="catalogue">
-            <div class="row">
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m4 s6">
-                    <div class="item-card">
-                        <div class="item-img-wrap">
-                            <a href="#"><img src="img/item.png" alt=""></a>
-                        </div>
-                        <div class="item-title">
-                            <a href="">Huinya</a>
-                        </div>
-                        <div class="item-price">
-                            <span>Price: 2 000 $</span>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn btn-cart full"><i class="fa fa-cart-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </main>
 <footer class="page-footer">
@@ -273,12 +374,14 @@
         </div>
     </div>
 </footer>
+
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="js/nouislider.js"></script>
 <script src="js/wNumb.js"></script>
-<script src="js/lightslider.js"></script>
+<script src="js/jquery.elevatezoom.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/init.js"></script>

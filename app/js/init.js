@@ -55,17 +55,33 @@ $(function () {
     }
 
 
-    $('#light-slider').lightSlider({
-        gallery:true,
-        item:1,
-        thumbItem:3,
-        slideMargin: 10,
-        speed:500,
-        auto:false,
-        loop:true,
-        onSliderLoad: function() {
-            $('#light-slider').removeClass('cS-hidden');
-        }
-    });
+    // $('#light-slider').lightSlider({
+    //     gallery:true,
+    //     item:1,
+    //     thumbItem:3,
+    //     slideMargin: 10,
+    //     speed:500,
+    //     auto:false,
+    //     loop:true,
+    //     onSliderLoad: function() {
+    //         $('#light-slider').removeClass('cS-hidden');
+    //     }
+    // });
+
+
+    $('#modal1').modal();
+    $('#order').modal();
+    $('select').material_select();
+    //
+    // $('#buy').on(click, function (e) {
+    //     $('#order').modal('close');
+    //     $('#modal1').modal('open');
+    // })
+    //initiate the plugin and pass the id of the div containing gallery images
+    $("#img_01").elevateZoom({gallery:'gallery_01',  galleryActiveClass: 'active'});
+
+//pass the images to Fancybox
+
+
 
 });

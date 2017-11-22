@@ -21,7 +21,8 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="left hide-on-med-and-down user-control">
                         <li class="active"><a href="index.html">Главная</a></li>
-                        <li><a href="category.html">Категории</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown-cat">Категории<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <!--<li><a href="category.html"></a></li>-->
                         <li><a href="about.html">О магазине</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
@@ -31,12 +32,10 @@
                         <li><a href="about.html">О магазине</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
-                    <div class="logo">
-                        <a href="#" class="brand-logo">Logo</a>
-                    </div>
+
                     <ul class="cart-n-lock">
-                        <li><a href=""><i class="fa fa-shopping-cart"></i><span>Корзина<span class="badge">123</span></span></a></li>
-                        <li><a href="registration.html"><i class="fa fa-lock "></i><span>Вход</span></a></li>
+                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>Корзина<span class="badge">123</span></span></a></li>
+                        <li><a class="modal-trigger" href="#modal1"><i class="fa fa-lock "></i><span>Вход</span></a></li>
                     </ul>
 
                 </div>
@@ -45,6 +44,64 @@
 
     </nav>
 </header>
+<ul id="dropdown-cat" class="dropdown-content z-depth-2">
+    <li><a href="category.html">Phones</a></li>
+    <li class="divider"></li>
+    <li><a href="category.html">Laptops</a></li>
+    <li class="divider"></li>
+    <li><a href="category.html">Desktops</a></li>
+</ul>
+
+<div id="modal1" class="modal">
+    <div class="modal-content registr">
+        <div class="row">
+            <div class="col s12">
+
+                <form class="z-depth-2">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="login" type="text" class="validate">
+                            <label for="login">Login</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="phone" type="tel" class="validate">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="btn-row">
+                        <button type="submit"  class="btn btn-cart full">Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <main id="main">
     <div class="default-section carousel-of-propose-items">
         <div class="container">
@@ -216,9 +273,15 @@
                     </div>
                 </div>
             </div>
-            <div class="show-more-items z-depth-1">
-                <i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i>
-            </div>
+            <ul class="pagination show-more-items">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
         </div>
     </div>
     <div class="default-section best-items">
@@ -363,7 +426,7 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="js/nouislider.js"></script>
 <script src="js/wNumb.js"></script>
-<script src="js/lightslider.js"></script>
+<script src="js/jquery.elevatezoom.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/init.js"></script>

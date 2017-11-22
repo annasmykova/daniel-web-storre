@@ -4520,6 +4520,7 @@ html[xmlns] .flexslider .slides {
 }
 
 #header nav ul.user-control {
+  height: 100%;
   font-weight: 300;
   font-size: 20px;
   color: #979797;
@@ -4544,6 +4545,14 @@ html[xmlns] .flexslider .slides {
 
 #header nav ul.cart-n-lock {
   margin-left: auto;
+}
+
+#header nav ul.cart-n-lock li {
+  height: 100%;
+}
+
+#header nav ul.cart-n-lock li a {
+  height: 100%;
 }
 
 #header nav ul.cart-n-lock .badge {
@@ -4578,7 +4587,6 @@ html[xmlns] .flexslider .slides {
 
 #aside {
   background-color: #191919;
-  width: 188px;
   height: 100vh;
   left: 0;
   z-index: 100;
@@ -4780,6 +4788,29 @@ html[xmlns] .flexslider .slides {
   margin-bottom: 15px;
 }
 
+.show-more-items {
+  background-color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.show-more-items:hover {
+  cursor: pointer;
+}
+
+.show-more-items:hover i {
+  color: #9e71ba;
+}
+
+.show-more-items i + i {
+  margin-left: 5px;
+}
+
+.show-more-items i {
+  display: inline-block;
+  color: #461a57;
+}
+
 .new-arrival {
   background-color: #f5f5f5;
 }
@@ -4816,29 +4847,6 @@ html[xmlns] .flexslider .slides {
   height: auto;
 }
 
-.new-arrival .container .show-more-items {
-  background-color: #fff;
-  padding: 15px 0;
-  text-align: center;
-}
-
-.new-arrival .container .show-more-items:hover {
-  cursor: pointer;
-}
-
-.new-arrival .container .show-more-items:hover i {
-  color: #9e71ba;
-}
-
-.new-arrival .container .show-more-items i + i {
-  margin-left: 5px;
-}
-
-.new-arrival .container .show-more-items i {
-  display: inline-block;
-  color: #461a57;
-}
-
 .content-wrapper {
   padding: 18px;
   height: -webkit-calc(100vh - 62px);
@@ -4855,11 +4863,6 @@ html[xmlns] .flexslider .slides {
 .card .card-header {
   border-bottom: 1px solid #e3e3e3;
   padding: 18px;
-}
-
-.aside-menu {
-  width: 25%;
-  min-width: 300px;
 }
 
 .aside-menu .aside-element {
@@ -4883,6 +4886,10 @@ html[xmlns] .flexslider .slides {
   font-size: 18px;
 }
 
+.aside-menu .aside-element .sort {
+  padding-bottom: 120px;
+}
+
 .range-slider-wrap {
   padding: 50px 15px 30px;
 }
@@ -4891,11 +4898,6 @@ html[xmlns] .flexslider .slides {
 .range-slider-wrap .noUi-horizontal .noUi-handle:active,
 .range-slider-wrap .noUi-horizontal .noUi-handle:focus {
   outline: none;
-}
-
-.catalogue {
-  width: 65%;
-  padding: 0 25px;
 }
 
 .catalogue .item-card {
@@ -5043,7 +5045,15 @@ html[xmlns] .flexslider .slides {
   font-weight: 300;
 }
 
-.registr {
+.modal {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  max-height: inherit;
+  top: auto !important;
+  background-color: transparent;
+}
+
+.modal .registr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5055,12 +5065,76 @@ html[xmlns] .flexslider .slides {
   font-weight: 500;
 }
 
-.registr form {
+.modal .registr form {
   display: inline-block;
   padding: 50px 40px;
   background-color: #fff;
   width: 100%;
   font-size: 22px;
+}
+
+.cart-wrap {
+  background: url("../img/bg1.png") no-repeat center/cover;
+  padding: 60px 0;
+}
+
+.cart-wrap .cart {
+  background-color: #fff;
+  padding: 40px;
+  width: 100%;
+}
+
+.cart-wrap .cart table tbody {
+  font-size: 18px;
+}
+
+.cart-wrap .cart table tbody tr:hover td.del {
+  z-index: 1;
+}
+
+.cart-wrap .cart table tbody tr:hover td.del:hover {
+  color: #ff0000;
+}
+
+.cart-wrap .cart table tbody tr td {
+  padding: 15px;
+}
+
+.cart-wrap .cart table tbody tr td.del {
+  width: 75px;
+  position: relative;
+  font-size: 24px;
+}
+
+.cart-wrap .cart table tbody tr td.del a {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.cart-wrap .cart table tbody tr .table-item {
+  max-height: 100px;
+}
+
+.cart-wrap .cart table tbody tr .table-item img {
+  height: 80px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.cart-wrap .cart .btn-row {
+  padding: 18px 0;
+}
+
+.cart-wrap .cart .btn-row .btn {
+  font-size: 25px;
 }
 
 .page-footer {

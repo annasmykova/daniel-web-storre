@@ -24,6 +24,7 @@
       box-shadow: none;
 
       ul.user-control{
+        height: 100%;
         font-weight:$fontRegular;
         font-size: 20px;
         color: $darkGrey;
@@ -54,6 +55,12 @@
       }
       ul.cart-n-lock{
         margin-left: auto;
+        li{
+          height: 100%;
+          a{
+            height: 100%;
+          }
+        }
         .badge{
           min-width: inherit;
           padding: 4px 0;
@@ -76,6 +83,7 @@
         }
       }
   }
+
 }
 
 
@@ -90,7 +98,7 @@
 
 #aside{
   background-color: $asideBg;
-  width:$asideWidth;
+  //width:$asideWidth;
   height:100vh;
   left: 0;
   z-index: 100;
@@ -283,7 +291,25 @@
     }
   }
 }
+.show-more-items{
+  background-color: $white;
+  padding: 15px 0;
+  text-align: center;
+  &:hover{
+    cursor: pointer;
+    i{
+      color: $lightPurple;
+    }
+  }
+  i+i{
+    margin-left: 5px;
+  }
+  i{
+    display: inline-block;
+    color: $purple;
 
+  }
+}
 //new arrivals
 .new-arrival{
   background-color: $xsLightGrey;
@@ -317,25 +343,6 @@
         }
       }
     }
-    .show-more-items{
-      background-color: $white;
-      padding: 15px 0;
-      text-align: center;
-      &:hover{
-        cursor: pointer;
-        i{
-          color: $lightPurple;
-        }
-      }
-      i+i{
-        margin-left: 5px;
-      }
-      i{
-        display: inline-block;
-        color: $purple;
-
-      }
-    }
   }
 }
 //content
@@ -357,8 +364,6 @@
 
 //aside
 .aside-menu{
-  width: 25%;
-  min-width: 300px;
   .aside-element{
     background-color: $white;
     padding: 25px;
@@ -380,6 +385,9 @@
         }
       }
     }
+    .sort{
+      padding-bottom: 120px;
+    }
 
   }
 }
@@ -395,8 +403,6 @@
 
 //catologue
 .catalogue{
-  width: 65%;
-  padding: 0 25px;
   .item-card{
     &:hover{
       box-shadow: 5px 5px 10px $grey;
@@ -519,11 +525,17 @@
 }
 
 //registration
-.registr{
-  display: flex;
-  justify-content: center;
-  font-weight: $fontMedium;
-  form{
+.modal{
+  box-shadow: none;
+  max-height: inherit;
+  top: auto!important;
+  //width: auto;
+  background-color: transparent;
+  .registr{
+    display: flex;
+    justify-content: center;
+    font-weight: $fontMedium;
+    form{
     display: inline-block;
     padding: 50px 40px;
     background-color: $white;
@@ -531,6 +543,66 @@
     font-size: 22px;
   }
 }
+
+}
+
+//cart
+.cart-wrap{
+  background: url('../img/bg1.png') no-repeat center / cover;
+  padding: 60px 0;
+  .cart{
+    background-color: $white;
+    padding: 40px;
+    width: 100%;
+    table{
+      tbody{
+        font-size: 18px;
+        tr{
+          &:hover td.del{
+            &:hover{
+              color: $red;
+            }
+            z-index: 1;
+          }
+          td{
+            padding: 15px;
+            &.del{
+              width: 75px;
+              position: relative;
+              font-size: 24px;
+              a{
+                z-index: -1;
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                transform: translateX(-50%) translateY(-50%);
+                transition:  all .3s linear;
+              }
+
+            }
+          }
+          .table-item{
+            max-height: 100px;
+            img{
+              height: 80px;
+              display: inline-block;
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+
+
+    }
+    .btn-row{
+      padding: 18px 0;
+      .btn{
+        font-size: 25px;
+      }
+    }
+  }
+}
+
 //footer
 .page-footer{
   margin-top: 60px;
