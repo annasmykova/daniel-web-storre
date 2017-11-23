@@ -5146,6 +5146,14 @@ html[xmlns] .flexslider .slides {
   background-color: #333;
 }
 
+.active img {
+  border: 2px solid #333 !important;
+}
+
+#gallery_01 img {
+  border: 2px solid white;
+}
+
 body {
   display: -webkit-box;
   display: -webkit-flex;
