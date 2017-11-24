@@ -5279,6 +5279,14 @@ html[xmlns] .flexslider .slides {
   background-color: #ff0000;
 }
 
+#admin main .cart tbody tr .btn-group .btn {
+  display: block;
+}
+
+#admin main .cart tbody tr .btn-group .btn + .btn {
+  margin-top: 15px;
+}
+
 #admin > *:not(#slide-out) {
   width: 81%;
   margin-left: auto;
