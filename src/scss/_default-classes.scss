@@ -9,6 +9,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.no-wrap{
+  flex-wrap: nowrap;
+}
 .justify-sb{
   justify-content: space-between;
 }
@@ -20,6 +23,9 @@
 }
 .align-center{
   align-items: center;
+}
+.align-stretch{
+  align-items: stretch;
 }
 
 //reference
@@ -46,4 +52,7 @@
 }
 .half{
   width: 50%;
+}
+.standard-width{
+  width: inherit;
 }

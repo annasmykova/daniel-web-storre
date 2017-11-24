@@ -40,7 +40,10 @@
                         <li><a class="modal-trigger" href="#modal1"><i class="fa fa-lock "></i><span>Вход</span></a></li>
                     </ul>
 
-                    <form style="width:100%; margin-bottom: 50px">
+
+                </div>
+                <div class="nav-wrapper">
+                    <form>
                         <div class="input-field">
                             <input id="search" type="search" required>
                             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
@@ -51,7 +54,6 @@
                 </div>
             </nav>
         </div>
-
     </nav>
 </header>
 <ul id="dropdown-cat" class="dropdown-content z-depth-2">
@@ -64,55 +66,54 @@
 
 <div id="modal1" class="modal">
     <div class="modal-content registr">
-            <div class="row">
-                <div class="col s12">
+        <div class="row">
+            <div class="col s12">
 
-                    <form class="z-depth-2">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="first_name" type="text" class="validate">
-                                <label for="first_name">First Name</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate">
-                                <label for="last_name">Last Name</label>
-                            </div>
+                <form class="z-depth-2">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="login" type="text" class="validate">
-                                <label for="login">Login</label>
-                            </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="password" type="password" class="validate">
-                                <label for="password">Password</label>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="login" type="text" class="validate">
+                            <label for="login">Login</label>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="phone" type="tel" class="validate">
-                                <label for="phone">Phone</label>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="phone" type="tel" class="validate">
+                            <label for="phone">Phone</label>
                         </div>
-                        <div class="btn-row">
-                            <button type="submit"  class="btn btn-cart full">Sign up</button>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="btn-row">
+                        <button type="submit"  class="btn btn-cart full">Sign up</button>
+                    </div>
+                </form>
             </div>
+        </div>
 
     </div>
 </div>
-
-<main id="main">
+<main id="main" class=" category-main">
     <div class="container flex-container">
         <div class="row">
             <div class="col m4 s12">
@@ -337,7 +338,7 @@
                     </div>
                 </div>
                 <ul class="pagination show-more-items">
-                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                     <li class="active"><a href="#!">1</a></li>
                     <li class="waves-effect"><a href="#!">2</a></li>
                     <li class="waves-effect"><a href="#!">3</a></li>

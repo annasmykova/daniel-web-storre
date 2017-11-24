@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ElectronicWorld</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="admin">
+<header id="header">
+    <nav>
+        <div class="container">
+            <nav>
+                <div class="nav-wrapper ">
+                    <form class="flex-container no-wrap align-center justify-sb">
+                        <div class="input-field full">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                        <button type="submit" class="waves-effect waves-light btn modal-trigger">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </nav>
+</header>
+<ul id="slide-out" class="side-nav" style="transform: translateX(0)">
+    <li><div class="user-view">
+        <div class="page-title">
+            <span >Admin</span>
+        </div>
+        <a href="#!name"><span class="admin-name card-title title">Daniel Pilipets</span></a>
+    </div></li>
+    <li class="divider"></li>
+    <li><a href="admin_index.html">News</a></li>
+    <li class="divider"></li>
+    <li><a href="">Categories</a></li>
+    <li class="divider"></li>
+    <li><a href="">Information</a></li>
+    <li class="divider"></li>
+</ul>
+<div class="btn-row">
+<div class="container">
+        <a class="waves-effect waves-light btn modal-trigger"><i class="fa fa-plus"></i>Add new</a>
+    </div>
+</div>
+<main id="main" class=" category-main">
+    <div class="cart-wrap z-depth-4">
+
+        <div class="container flex-container">
+
+            <div class="cart">
+
+                <table class="bordered highlight">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Category name</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td class="flex-container align-center table-item">
+                            <div class="img-cart"><img src="img/prod.png" alt=""></div>
+                            <span class="item-name">Laptop dfghj456cvbrt</span>
+                        </td>
+                        <td>20.2.17</td>
+                        <td>Economy</td>
+                        <td class="flex-container justify-sb align-center">
+                            <a href=""  class="waves-effect waves-light btn modal-trigger">Update</a>
+                            <a href="" class="waves-effect waves-light btn modal-trigger del-item"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <ul class="pagination show-more-items">
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</main>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/wNumb.js"></script>
+<script src="js/jquery.elevatezoom.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>

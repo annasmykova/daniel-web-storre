@@ -50,9 +50,6 @@
         }
       }
 
-      .logo{
-
-      }
       ul.cart-n-lock{
         margin-left: auto;
         li{
@@ -82,11 +79,30 @@
           margin-left: 6px;
         }
       }
+
+      .nav-wrapper{
+        .input-field{
+          label{
+            transform: translateY(0);
+          }
+          i{
+            color: $black;
+
+          }
+
+          #search{
+            background-color: $white;
+          }
+        }
+      }
   }
 
 }
 
-
+//category-main
+.category-main{
+  margin-top: 70px;
+}
 
 
 //aside
@@ -295,19 +311,10 @@
   background-color: $white;
   padding: 15px 0;
   text-align: center;
-  &:hover{
-    cursor: pointer;
-    i{
-      color: $lightPurple;
+  &.pagination{
+    li.active{
+      background-color: $lightPurple;
     }
-  }
-  i+i{
-    margin-left: 5px;
-  }
-  i{
-    display: inline-block;
-    color: $purple;
-
   }
 }
 //new arrivals
@@ -565,7 +572,7 @@
             z-index: 1;
           }
           td{
-            padding: 15px;
+            padding: 15px 5px;
             &.del{
               width: 75px;
               position: relative;
@@ -582,12 +589,90 @@
             }
           }
           .table-item{
-            max-height: 100px;
-            img{
+            .img-cart{
+              width: 90px;
               height: 80px;
-              display: inline-block;
+              display: flex;
               margin-right: 15px;
+              justify-content: center;
+              align-items: center;
+              img{
+              }
             }
+          }
+          .quantity {
+            color: $black;
+            position: relative;
+            & * {
+              background-color: $white;
+            }
+          }
+
+          input[type=number]::-webkit-inner-spin-button,
+          input[type=number]::-webkit-outer-spin-button
+          {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          input[type=number]
+          {
+            -moz-appearance: textfield;
+          }
+
+          .quantity input {
+            width: 45px;
+            height: 42px;
+            line-height: 1.65;
+            float: left;
+            display: block;
+            padding: 0;
+            margin: 0;
+            padding-left: 20px;
+            color: $darkGrey;
+            border: 1px solid $grey;
+          }
+
+          .quantity input:focus {
+            outline: 0;
+          }
+
+          .quantity-nav {
+            float: left;
+            position: relative;
+            height: 42px;
+          }
+
+          .quantity-button {
+            position: relative;
+            cursor: pointer;
+            width: 20px;
+            text-align: center;
+            color: $darkGrey;
+            font-weight: $fontRegular;
+            font-size: 16px;
+            border: 1px solid $grey;
+            position: absolute;
+            height: 51%;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            &:hover{
+              background-color: #b0e6d0;
+            }
+          }
+
+          .quantity-button.quantity-up {
+            top: 0;
+          }
+
+          .quantity-button.quantity-down {
+            margin-bottom: -1px;
+            bottom: 0;
           }
         }
       }
@@ -616,3 +701,50 @@
 #gallery_01 img{border:2px solid white;}
 
 
+//admin
+#admin{
+  header{
+    form{
+      .btn{
+        height: 100%;
+        margin-left: 10px;
+        box-shadow: none;
+      }
+    }
+  }
+  .container{
+    width: 85%;
+  }
+  main{
+    .cart{
+
+      tbody{
+        tr{
+          td {
+            btn + btn{
+              margin-left: 15px;
+            }
+            .del-item{
+              background-color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+  &>*:not(#slide-out){
+    width: 81%;
+    margin-left: auto;
+  }
+  #slide-out{
+    border-right: 1px solid $grey;
+    .page-title{}
+    .user-view{
+
+      .admin-name{
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -4441,6 +4441,12 @@ html[xmlns] .flexslider .slides {
           flex-wrap: wrap;
 }
 
+.no-wrap {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
 .justify-sb {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -4469,6 +4475,13 @@ html[xmlns] .flexslider .slides {
           align-items: center;
 }
 
+.align-stretch {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 .def-ref {
   font-size: 14px;
   color: #9e71ba;
@@ -4490,6 +4503,10 @@ html[xmlns] .flexslider .slides {
 
 .half {
   width: 50%;
+}
+
+.standard-width {
+  width: inherit;
 }
 
 .page-title, .section-title {
@@ -4577,6 +4594,24 @@ html[xmlns] .flexslider .slides {
 #header nav ul.cart-n-lock i + span {
   display: inline-block;
   margin-left: 6px;
+}
+
+#header nav .nav-wrapper .input-field label {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#header nav .nav-wrapper .input-field i {
+  color: #333;
+}
+
+#header nav .nav-wrapper .input-field #search {
+  background-color: #fff;
+}
+
+.category-main {
+  margin-top: 70px;
 }
 
 #aside .aside-menu ul li.active a, #aside .aside-menu ul li a:hover {
@@ -4794,21 +4829,8 @@ html[xmlns] .flexslider .slides {
   text-align: center;
 }
 
-.show-more-items:hover {
-  cursor: pointer;
-}
-
-.show-more-items:hover i {
-  color: #9e71ba;
-}
-
-.show-more-items i + i {
-  margin-left: 5px;
-}
-
-.show-more-items i {
-  display: inline-block;
-  color: #461a57;
+.show-more-items.pagination li.active {
+  background-color: #9e71ba;
 }
 
 .new-arrival {
@@ -5097,7 +5119,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .cart-wrap .cart table tbody tr td {
-  padding: 15px;
+  padding: 15px 5px;
 }
 
 .cart-wrap .cart table tbody tr td.del {
@@ -5119,14 +5141,98 @@ html[xmlns] .flexslider .slides {
   transition: all .3s linear;
 }
 
-.cart-wrap .cart table tbody tr .table-item {
-  max-height: 100px;
+.cart-wrap .cart table tbody tr .table-item .img-cart {
+  width: 90px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 15px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.cart-wrap .cart table tbody tr .table-item img {
-  height: 80px;
-  display: inline-block;
-  margin-right: 15px;
+.cart-wrap .cart table tbody tr .quantity {
+  color: #333;
+  position: relative;
+}
+
+.cart-wrap .cart table tbody tr .quantity * {
+  background-color: #fff;
+}
+
+.cart-wrap .cart table tbody tr input[type=number]::-webkit-inner-spin-button,
+.cart-wrap .cart table tbody tr input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cart-wrap .cart table tbody tr input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.cart-wrap .cart table tbody tr .quantity input {
+  width: 45px;
+  height: 42px;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  color: #979797;
+  border: 1px solid #bababa;
+}
+
+.cart-wrap .cart table tbody tr .quantity input:focus {
+  outline: 0;
+}
+
+.cart-wrap .cart table tbody tr .quantity-nav {
+  float: left;
+  position: relative;
+  height: 42px;
+}
+
+.cart-wrap .cart table tbody tr .quantity-button {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  text-align: center;
+  color: #979797;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #bababa;
+  position: absolute;
+  height: 51%;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.cart-wrap .cart table tbody tr .quantity-button:hover {
+  background-color: #b0e6d0;
+}
+
+.cart-wrap .cart table tbody tr .quantity-button.quantity-up {
+  top: 0;
+}
+
+.cart-wrap .cart table tbody tr .quantity-button.quantity-down {
+  margin-bottom: -1px;
+  bottom: 0;
 }
 
 .cart-wrap .cart .btn-row {
@@ -5152,6 +5258,39 @@ html[xmlns] .flexslider .slides {
 
 #gallery_01 img {
   border: 2px solid white;
+}
+
+#admin header form .btn {
+  height: 100%;
+  margin-left: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#admin .container {
+  width: 85%;
+}
+
+#admin main .cart tbody tr td btn + btn {
+  margin-left: 15px;
+}
+
+#admin main .cart tbody tr td .del-item {
+  background-color: #ff0000;
+}
+
+#admin > *:not(#slide-out) {
+  width: 81%;
+  margin-left: auto;
+}
+
+#admin #slide-out {
+  border-right: 1px solid #bababa;
+}
+
+#admin #slide-out .user-view .admin-name {
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
 body {
