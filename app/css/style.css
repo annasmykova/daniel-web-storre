@@ -5305,6 +5305,18 @@ html[xmlns] .flexslider .slides {
   font-weight: 300;
 }
 
+#admin main .sql-wrap {
+  padding: 40px;
+}
+
+#admin main .sql-wrap .sql-out {
+  padding: 35px 20px;
+  min-height: 150px;
+  border: 1px solid #333;
+  width: 75%;
+  margin: 40px auto 0;
+}
+
 #admin main .btn.add-btn {
   background-color: #299d00;
 }
@@ -5360,6 +5372,10 @@ html[xmlns] .flexslider .slides {
 #admin #slide-out .user-view .admin-name {
   font-size: 22px;
   text-transform: uppercase;
+}
+
+.padding-section {
+  padding: 35px 20px;
 }
 
 body {

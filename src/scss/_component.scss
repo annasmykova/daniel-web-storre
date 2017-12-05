@@ -737,6 +737,16 @@
       width: 75%;
       font-weight: $fontRegular;
     }
+    .sql-wrap{
+      padding: 40px;
+       .sql-out{
+         padding: 35px 20px;
+         min-height: 150px;
+         border:1px solid $black;
+         width: 75%;
+         margin: 40px auto 0;
+       }
+     }
     .btn.add-btn{
       background-color: #299d00;
     }
@@ -795,4 +805,8 @@
       }
     }
   }
+}
+
+.padding-section{
+  padding: 35px 20px;
 }

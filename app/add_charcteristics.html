@@ -44,51 +44,25 @@
     <li><a href="admin_statistics.html">Statistics</a></li>
     <li><a href="admin_sql.html">SQl</a></li>
 </ul>
-<main id="main" class="category-main">
+
+<main id="main" class=" category-main">
     <div class="container">
-        <div class="admin-wrap white-bg">
-            <div class="admin-table-wrap">
-                <div class="btn-row flex-container justify-fe">
-                    <a href="add_category.html" class="waves-effect waves-light btn modal-trigger add-btn"><i class="fa fa-plus"></i></a>
+        <div class="z-depth-2 edit-wrap white-bg flex-container justify-cntr">
+            <form class="edit">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="characteristics" class="materialize-textarea"></textarea>
+                        <label for="characteristics">Характеристика</label>
+                    </div>
                 </div>
-                <table class="bordered highlight">
-                    <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Название</th>
-                        <th>Порядок</th>
-                        <th>Характеристика категории</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <tr>
-                        <td>1225</td>
-                        <td>Laptop</td>
-                        <td>2</td>
-                        <td><a href="category_characteristics.html" class="waves-effect waves-light btn char" >Хар-ка категории</a></td>
-                        <td class="btn-group">
-                            <a href="update_category.html"  class="waves-effect waves-light btn"><i class="fa fa-refresh"></i></a>
-                            <a href="" class="waves-effect waves-light btn del-item "><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <ul class="pagination show-more-items">
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a href="#!">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
-                    <li class="waves-effect"><a href="#!">4</a></li>
-                    <li class="waves-effect"><a href="#!">5</a></li>
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                </ul>
-            </div>
+                <div class="btn-row">
+                    <button type="submit"  class="btn btn-cart full">Добавить</button>
+                </div>
+            </form>
         </div>
 
     </div>
+
 </main>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
