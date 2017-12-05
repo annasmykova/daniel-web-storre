@@ -7,8 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ElectronicWorld</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,900i&amp;subset=cyrillic" rel="stylesheet">    <link rel="stylesheet" href="css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -110,23 +109,35 @@
             <div class="main-product-body flex-container">
                 <div class="row">
                     <div class="col m5">
-                        <div id="product-img-wrap">
-                            <img id="img_01"  src="img/item.png" data-zoom-image="img/item.png"/>
-
-                            <div id="gal1" class="flex-container">
-
-                                <a href="#" class="elevatezoom-gallery" data-image="img/item.png" data-zoom-image="img/item.png">
-                                    <img  src="img/item.png" />
-                                </a>
-
-                                <a href="#" class="elevatezoom-gallery" data-image="img/prod.png" data-zoom-image="img/prod.png">
-                                    <img  src="img/prod.png" />
-                                </a>
-
-
-                            </div>
+                        <div class="product-img-wrap">
+                            <ul id="light-slider" class="carousel-prod">
+                                <li  data-thumb='img/prod.png'>
+                                    <img src="img/prod.png" alt="" class="zoom">
+                                </li>
+                                <li  data-thumb='img/item.png'>
+                                    <img src="img/item.png" alt="">
+                                </li>
+                                <li  data-thumb='img/item.png'>
+                                    <img src="img/item.png" alt="">
+                                </li>
+                                <li  data-thumb='img/item.png'>
+                                    <img src="img/item.png" alt="">
+                                </li>
+                                <li  data-thumb='img/item.png'>
+                                    <img src="img/item.png" alt="">
+                                </li>
+                                <li  data-thumb='img/item.png'>
+                                    <img src="img/item.png" alt="">
+                                </li>
+                                <li  data-thumb='img/item.png'>
+                                    <img src="img/item.png" alt="">
+                                </li>
+                                <li  data-thumb='img/item.png'>
+                                    <img src="img/item.png" alt="">
+                                </li>
+                            </ul>
                         </div>
-                    </div>
+                     </div>
                     <div class="col m7">
                         <form class="short-description">
                             <div class="item-title">
@@ -227,7 +238,7 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="js/nouislider.js"></script>
 <script src="js/wNumb.js"></script>
-<script src="js/jquery.elevatezoom.js"></script>
+<script src="js/lightslider.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/init.js"></script>

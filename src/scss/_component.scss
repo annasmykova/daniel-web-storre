@@ -533,9 +533,10 @@
 
 //registration
 .modal{
+  top: 5%;
+  width: auto;
+  min-height: 90%;
   box-shadow: none;
-  max-height: inherit;
-  top: auto!important;
   //width: auto;
   background-color: transparent;
   .registr{
@@ -697,13 +698,27 @@
   }
 }
 
-.active img{border:2px solid #333 !important;}
-#gallery_01 img{border:2px solid white;}
+
+//btn-row
+.btn-row{
+  padding: 18px 0;
+}
 
 
 //admin
 #admin{
-  header{
+  background: url('../img/bg1.png') no-repeat center / cover;
+  #header{
+    nav{
+      padding-top: 0;
+      nav{
+        padding-top: 10px;
+        .nav-wrapper{
+          height: 80%;
+        }
+
+      }
+    }
     form{
       .btn{
         height: 100%;
@@ -716,36 +731,60 @@
     width: 85%;
   }
   main{
-    .cart{
+    padding-bottom: 35px;
+    .edit{
+      padding: 18px;
+      width: 75%;
+      font-weight: $fontRegular;
+    }
+    .btn.add-btn{
+      background-color: #299d00;
+    }
+    .admin-wrap{
+      padding: 0;
 
-      tbody{
-        tr{
-          td {
-            btn + btn{
-              margin-left: 15px;
+      .admin-table-wrap{
+        overflow: scroll;
+        font-size: 14px;
+        font-weight: $fontMedium;
+        .btn-row{
+          padding: 18px 5px;
+        }
+        tbody{
+          tr{
+            td {
+              font-weight: 400;
+              btn + btn{
+                margin-left: 15px;
+              }
+              .del-item{
+                background-color: $red;
+              }
+              .char{
+                white-space: nowrap;
+              }
             }
-            .del-item{
-              background-color: $red;
-            }
-          }
-          .btn-group{
-            .btn{
-              display: block;
+            .btn-group{
+              .btn{
+                display: block;
 
-              & + .btn{
-                margin-top: 15px;
+                & + .btn{
+                  margin-top: 15px;
+                }
               }
             }
           }
         }
       }
     }
+    
   }
   &>*:not(#slide-out){
-    width: 81%;
+    width: 80.18%;
     margin-left: auto;
   }
   #slide-out{
+    width: 20%;
     border-right: 1px solid $grey;
     .page-title{}
     .user-view{

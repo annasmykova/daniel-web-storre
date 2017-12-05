@@ -3,6 +3,10 @@
 //  width: ;
 //}
 
+//bg
+.white-bg{
+  background-color: #fff;
+}
 // flex
 
 .flex-container{
@@ -20,6 +24,9 @@
 }
 .justify-cntr{
   justify-content: center;
+}
+.justify-fe{
+  justify-content: flex-end;
 }
 .align-center{
   align-items: center;

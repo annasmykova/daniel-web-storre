@@ -7,8 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ElectronicWorld</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,900i&amp;subset=cyrillic" rel="stylesheet">    <link rel="stylesheet" href="css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -39,46 +38,54 @@
         <a href="#!name"><span class="admin-name card-title title">Daniel Pilipets</span></a>
     </div></li>
     <li class="divider"></li>
-    <li><a href="admin_index.html">News</a></li>
-    <li class="divider"></li>
+    <li><a href="admin_index.html">Items</a></li>
     <li><a href="admin_category.html">Categories</a></li>
-    <li class="divider"></li>
-    <li><a href="">Information</a></li>
-    <li class="divider"></li>
+    <li><a href="admin_users.html">Users</a></li>
+    <li><a href="admin_statistics.html">Statistics</a></li>
+    <li><a href="admin_sql.html">SQl</a></li>
 </ul>
-<div class="btn-row">
-<div class="container">
-        <a class="waves-effect waves-light btn modal-trigger"><i class="fa fa-plus"></i>Add new</a>
-    </div>
-</div>
 <main id="main" class=" category-main">
-    <div class="cart-wrap z-depth-4">
-
-        <div class="container flex-container">
-
-            <div class="cart">
-
+    <div class="admin-wrap white-bg">
+            <div class="admin-table-wrap">
+                <div class="btn-row flex-container justify-fe">
+                    <a href="add_device.html" class="waves-effect waves-light btn modal-trigger add-btn"><i class="fa fa-plus"></i></a>
+                </div>
                 <table class="bordered highlight">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Date</th>
-                        <th>Category name</th>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Категория</th>
+                        <th>Цена</th>
+                        <th>Миниатюра</th>
+                        <th>Наличие</th>
+                        <th>Новое</th>
+                        <th>Рекомендованое</th>
+                        <th>Кол-во</th>
+                        <th>Описание</th>
+                        <th>Фото</th>
+                        <th>Хар-ки</th>
                         <th></th>
                     </tr>
                     </thead>
 
                     <tbody>
                     <tr>
-                        <td class="flex-container align-center table-item">
-                            <div class="img-cart"><img src="img/prod.png" alt=""></div>
-                            <span class="item-name">Laptop dfghj456cvbrt</span>
-                        </td>
-                        <td>20.2.17</td>
-                        <td>Economy</td>
+                        <td>1225</td>
+                        <td>Laptop dfghj456cvbrt</td>
+                        <td>Ноутбук</td>
+                        <td> 2700</td>
+                        <td>img/prod.png</td>
+                        <td>Есть</td>
+                        <td>Да</td>
+                        <td>Да</td>
+                        <td>5</td>
+                        <td><a href="device-description.html" class="waves-effect waves-light btn">Описание</a></td>
+                        <td><a href="device-img.html" class="waves-effect waves-light btn">Фото</a></td>
+                        <td><a href="device-characteristics.html" class="waves-effect waves-light btn char" >Хар-ки</a></td>
                         <td class="btn-group">
-                            <a href=""  class="waves-effect waves-light btn modal-trigger">Update</a>
-                            <a href="" class="waves-effect waves-light btn modal-trigger del-item"><i class="fa fa-trash"></i></a>
+                            <a href="update-device.html"  class="waves-effect waves-light btn"><i class="fa fa-refresh"></i></a>
+                            <a href="" class="waves-effect waves-light btn del-item "><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                     </tbody>
@@ -94,8 +101,6 @@
                     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
                 </ul>
             </div>
-
-        </div>
     </div>
 </main>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

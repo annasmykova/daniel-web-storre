@@ -54,48 +54,30 @@ $(function () {
         });
     }
 
-
-    // $('#light-slider').lightSlider({
-    //     gallery:true,
-    //     item:1,
-    //     thumbItem:3,
-    //     slideMargin: 10,
-    //     speed:500,
-    //     auto:false,
-    //     loop:true,
-    //     onSliderLoad: function() {
-    //         $('#light-slider').removeClass('cS-hidden');
-    //     }
-    // });
+    if(document.getElementById('light-slider') ){
+        $('#light-slider').lightSlider({
+            gallery:true,
+            item:1,
+            thumbItem:3,
+            slideMargin: 10,
+            speed:500,
+            auto:false,
+            loop:true,
+            onSliderLoad: function() {
+                $('#light-slider').removeClass('cS-hidden');
+            }
+        })
+    }
 
 
     $('#modal1').modal();
+    $('#modal2').modal();
     $('#order').modal();
     $('select').material_select();
-    //
-    // $('#buy').on(click, function (e) {
-    //     $('#order').modal('close');
-    //     $('#modal1').modal('open');
-    // })
-
-    //initiate the plugin and pass the id of the div containing gallery images
-    // $("#img_01").elevateZoom({gallery:'gallery_01',  galleryActiveClass: 'active'});
-    $("#img_01").elevateZoom({
-        gallery:'gal1',
-        cursor: 'pointer',
-        galleryActiveClass: 'active',
-        imageCrossfade: true,
-        loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'});
 
 
-    //pass the images to Fancybox
-    // $("#img_01").bind("click", function(e) {
-    //     var ez =   $('#img_01').data('elevateZoom');
-    //     $.fancybox(ez.getGalleryList());
-    //     return false;
-    // });
 
-//pass the images to Fancybox
+
 
 
 

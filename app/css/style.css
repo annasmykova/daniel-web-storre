@@ -4431,6 +4431,10 @@ html[xmlns] .flexslider .slides {
   cursor: grabbing;
 }
 
+.white-bg {
+  background-color: #fff;
+}
+
 .flex-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4466,6 +4470,13 @@ html[xmlns] .flexslider .slides {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.justify-fe {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .align-center {
@@ -5068,10 +5079,11 @@ html[xmlns] .flexslider .slides {
 }
 
 .modal {
+  top: 5%;
+  width: auto;
+  min-height: 90%;
   -webkit-box-shadow: none;
           box-shadow: none;
-  max-height: inherit;
-  top: auto !important;
   background-color: transparent;
 }
 
@@ -5252,15 +5264,27 @@ html[xmlns] .flexslider .slides {
   background-color: #333;
 }
 
-.active img {
-  border: 2px solid #333 !important;
+.btn-row {
+  padding: 18px 0;
 }
 
-#gallery_01 img {
-  border: 2px solid white;
+#admin {
+  background: url("../img/bg1.png") no-repeat center/cover;
 }
 
-#admin header form .btn {
+#admin #header nav {
+  padding-top: 0;
+}
+
+#admin #header nav nav {
+  padding-top: 10px;
+}
+
+#admin #header nav nav .nav-wrapper {
+  height: 80%;
+}
+
+#admin #header form .btn {
   height: 100%;
   margin-left: 10px;
   -webkit-box-shadow: none;
@@ -5271,28 +5295,65 @@ html[xmlns] .flexslider .slides {
   width: 85%;
 }
 
-#admin main .cart tbody tr td btn + btn {
+#admin main {
+  padding-bottom: 35px;
+}
+
+#admin main .edit {
+  padding: 18px;
+  width: 75%;
+  font-weight: 300;
+}
+
+#admin main .btn.add-btn {
+  background-color: #299d00;
+}
+
+#admin main .admin-wrap {
+  padding: 0;
+}
+
+#admin main .admin-wrap .admin-table-wrap {
+  overflow: scroll;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#admin main .admin-wrap .admin-table-wrap .btn-row {
+  padding: 18px 5px;
+}
+
+#admin main .admin-wrap .admin-table-wrap tbody tr td {
+  font-weight: 400;
+}
+
+#admin main .admin-wrap .admin-table-wrap tbody tr td btn + btn {
   margin-left: 15px;
 }
 
-#admin main .cart tbody tr td .del-item {
+#admin main .admin-wrap .admin-table-wrap tbody tr td .del-item {
   background-color: #ff0000;
 }
 
-#admin main .cart tbody tr .btn-group .btn {
+#admin main .admin-wrap .admin-table-wrap tbody tr td .char {
+  white-space: nowrap;
+}
+
+#admin main .admin-wrap .admin-table-wrap tbody tr .btn-group .btn {
   display: block;
 }
 
-#admin main .cart tbody tr .btn-group .btn + .btn {
+#admin main .admin-wrap .admin-table-wrap tbody tr .btn-group .btn + .btn {
   margin-top: 15px;
 }
 
 #admin > *:not(#slide-out) {
-  width: 81%;
+  width: 80.18%;
   margin-left: auto;
 }
 
 #admin #slide-out {
+  width: 20%;
   border-right: 1px solid #bababa;
 }
 

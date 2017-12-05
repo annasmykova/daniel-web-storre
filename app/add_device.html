@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ElectronicWorld</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,900i&amp;subset=cyrillic" rel="stylesheet">    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="admin">
+<header id="header">
+    <nav>
+        <div class="container">
+            <nav>
+                <div class="nav-wrapper ">
+                    <form class="flex-container no-wrap align-center justify-sb">
+                        <div class="input-field full">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                        <button type="submit" class="waves-effect waves-light btn modal-trigger">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </nav>
+</header>
+<ul id="slide-out" class="side-nav" style="transform: translateX(0)">
+    <li><div class="user-view">
+        <div class="page-title">
+            <span >Admin</span>
+        </div>
+        <a href="#!name"><span class="admin-name card-title title">Daniel Pilipets</span></a>
+    </div></li>
+    <li class="divider"></li>
+    <li><a href="admin_index.html">Items</a></li>
+    <li><a href="admin_category.html">Categories</a></li>
+    <li><a href="admin_users.html">Users</a></li>
+    <li><a href="admin_statistics.html">Statistics</a></li>
+    <li><a href="admin_sql.html">SQl</a></li>
+</ul>
+
+<main id="main" class=" category-main">
+    <div class="container">
+        <div class="z-depth-2 edit-wrap white-bg flex-container justify-cntr">
+            <form class="edit">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="device_name" type="text" class="validate">
+                        <label for="device_name">Название</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="category" type="text" class="validate">
+                        <label for="category">Категория</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="price" type="text" class="validate">
+                        <label for="price">Цена</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="mini_img" type="text" class="validate">
+                        <label for="mini_img">Миниатюра</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="availability" type="tel" class="validate">
+                        <label for="availability">Наличие</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="is_new" type="text" class="validate">
+                        <label for="is_new">Новое</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="recommended" type="email" class="validate">
+                        <label for="recommended">Рекомендованое</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="quantity" type="text" class="validate">
+                        <label for="quantity">Количество</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="description" type="text" class="validate">
+                        <label for="description">Описание</label>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button type="submit"  class="btn btn-cart full">Добавить</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</main>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/wNumb.js"></script>
+<script src="js/jquery.elevatezoom.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>
